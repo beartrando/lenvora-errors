@@ -1,0 +1,35 @@
+{
+  "name": "@shared/errors",
+  "version": "1.0.0",
+  "description": "Lenvora shared error types",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beartrando/errors.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -w -p tsconfig.json",
+    "prepare": "tsc -p tsconfig.json",
+    "proto:generate": "pnpm exec protoc --plugin=protoc-gen-ts_proto=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=src/contracts/proto --ts_proto_opt=outputServices=none,useExactTypes=false,esModuleInterop=true --proto_path=${PROTO_DIR:-../proto} ${PROTO_DIR:-../proto}/common/error.proto"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "ts-proto": "^2.11.6"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.11.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "packageManager": "pnpm@11.28.4"
+}
