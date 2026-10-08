@@ -1,7 +1,7 @@
 {
   "name": "@shared/errors",
   "version": "1.0.0",
-  "description": "Lenvora shared error types",
+  "description": "Shared error types module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": {
