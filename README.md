@@ -10,7 +10,9 @@ import { NotFoundError } from "@shared/errors";
 
 ## Proto codegen
 
-`src/contracts/proto/common/error.ts` is generated from the [lenvora-proto](https://github.com/beartrando/lenvora-proto) repository and **committed** (it is required to build the package). To regenerate after a contract change, clone the proto repository next to this one:
+`src/contracts/proto/common/error.ts` is generated from the [lenvora-proto](https://github.com/beartrando/lenvora-proto)
+repository and **committed** (it is required to build the package). To regenerate after a contract change, clone the
+proto repository next to this one:
 
 ```bash
 git clone git@github.com:beartrando/lenvora-proto.git ../proto
